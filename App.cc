@@ -5,8 +5,8 @@
 wxIMPLEMENT_APP(App);
 
 bool App::OnInit() {
-    MainFrame* mainFrame = new MainFrame("C++ GUI");
-    mainFrame->SetSize(800, 600);
+    MainFrame* mainFrame = new MainFrame("CS3620 Final Project");
+    mainFrame->SetClientSize(800, 600);
     mainFrame->Center();
     mainFrame->Show();
     return true;

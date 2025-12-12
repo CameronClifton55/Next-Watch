@@ -1,9 +1,9 @@
 CXX := g++
-CXXFLAGS := -Wall -Werror $(shell wx-config --cxxflags)
-LDFLAGS := $(shell wx-config --libs)
+CXXFLAGS := -Wall $(shell wx-config --cxxflags) -I/usr/include/mysql-cppconn/jdbc
+LDFLAGS := $(shell wx-config --libs) -lmysqlcppconn 
 
 # Sources and objects
-SRCS := App.cc MainFrame.cc
+SRCS := App.cc MainFrame.cc Database.cc
 OBJS := $(SRCS:.cc=.o)
 
 # Output program name
